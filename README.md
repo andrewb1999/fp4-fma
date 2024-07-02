@@ -5,26 +5,9 @@
 - Source files (input to Vivado HLS)
 
 ```shell
-├── Makefile                    # Makefile. Run `make all|fixed-sw|fixed-hw|fixed|float-sw|float-hw|float|clean`
+├── Makefile                    # Makefile. Run `make all|fp4|fp4-sw|fp4-hw|clean`
 ├── fp4.cpp                     # C++ source
 ├── fp4.h                       # C++ header
 ├── fp4_test.cpp                # Testbench
-├── run_fixed.tcl               # Tcl script to synthesize fixed-point design
-├── run_float.tcl               # Tcl script to synthesize floating-point design
-└── script
-    └── collect_result.tcl      # Tcl script to parse synthesis reports
-```
-
-- Output files by Vivado HLS
-```shell
-# Example project directory (TOT_W=32, INT_W=16, STEP=20)
-$ tree fixed_32_16_20.prj/ -L 2
-
-fixed_32_16_20.prj/            
-├── solution1
-│   ├── csim
-│   ├── impl
-│   ├── sim
-│   └── syn
-└── vivado_hls.app
+└── run.tcl                     # Run HLS Synthesis
 ```
